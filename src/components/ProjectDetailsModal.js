@@ -120,28 +120,76 @@ class ProjectDetailsModal extends Component {
               {title}
             </h3>
             {url ? (
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  padding: "10px 20px",
-                  borderRadius: "25px",
-                  backgroundColor: url.includes("play.google.com") ? "#01875f" : "#24292e",
-                  color: "white",
-                  textDecoration: "none",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  marginBottom: "15px",
-                  transition: "all 0.3s ease"
-                }}
-              >
-                <i className={linkInfo.icon} style={{ fontSize: "18px" }}></i>
-                {linkInfo.text}
-              </a>
+              <div style={{ display: "flex", gap: "10px", marginBottom: "15px", flexWrap: "wrap" }}>
+                {url.includes("play.google.com") && (
+                  <>
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "10px 20px",
+                        borderRadius: "25px",
+                        backgroundColor: "#01875f",
+                        color: "white",
+                        textDecoration: "none",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        transition: "all 0.3s ease"
+                      }}
+                    >
+                      <i className="fab fa-google-play" style={{ fontSize: "18px" }}></i>
+                      Play Store
+                    </a>
+                    <button
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "10px 20px",
+                        borderRadius: "25px",
+                        backgroundColor: "#000000",
+                        color: "white",
+                        border: "none",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease"
+                      }}
+                      onClick={() => {}}
+                    >
+                      <i className="fab fa-apple" style={{ fontSize: "18px" }}></i>
+                      App Store
+                    </button>
+                  </>
+                )}
+                {url.includes("github.com") && (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      padding: "10px 20px",
+                      borderRadius: "25px",
+                      backgroundColor: "#24292e",
+                      color: "white",
+                      textDecoration: "none",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    <i className="fab fa-github" style={{ fontSize: "18px" }}></i>
+                    GitHub
+                  </a>
+                )}
+              </div>
             ) : null}
             <p className="modal-description">{description}</p>
             <div className="col-md-12 text-center">

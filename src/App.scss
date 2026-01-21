@@ -351,6 +351,11 @@ header h1 {
 	text-align: center;
 }
 
+.project-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
 .portfolio .portfolio-item .portfolio-item-caption {
 	-webkit-transition: all ease 0.5s;
 	-moz-transition: all ease 0.5s;

@@ -33,61 +33,144 @@ class Projects extends Component {
         const linkInfo = this.getLinkIcon(project.url);
         return (
           <div
-            className="col-sm-12 col-md-6 col-lg-4"
+            className="project-card"
             key={project.title}
-            style={{ cursor: "pointer" }}
+            style={{ 
+              cursor: "pointer",
+              background: "#ffffff",
+              borderRadius: "10px",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.3)",
+              overflow: "hidden",
+              transition: "all 0.3s ease",
+              display: "flex",
+              flexDirection: "column"
+            }}
           >
-            <span className="portfolio-item d-block">
-              <div className="foto" onClick={() => detailsModalShow(project)}>
-                <div>
-                  {project.images && project.images.length > 0 ? (
-                    <img
-                      src={project.images[0]}
-                      alt="projectImages"
-                      height="230"
-                      style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
-                    />
-                  ) : (
-                    <div 
-                      style={{
-                        height: "230px",
-                        width: "100%",
-                        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "white",
-                        fontSize: "24px",
-                        fontWeight: "bold",
-                        textAlign: "center",
-                        padding: "20px",
-                        borderRadius: "8px 8px 0 0"
-                      }}
-                    >
-                      {project.title}
-                    </div>
-                  )}
-                  <span className="project-date">{project.startDate}</span>
-                  <br />
-                  <p className="project-title-settings mt-3">
-                    {project.title}
-                  </p>
+            <div 
+              onClick={() => detailsModalShow(project)}
+              style={{ flex: 1, display: "flex", flexDirection: "column" }}
+            >
+              {project.images && project.images.length > 0 ? (
+                <img
+                  src={project.images[0]}
+                  alt="projectImages"
+                  style={{
+                    height: "200px",
+                    width: "100%",
+                    objectFit: "cover"
+                  }}
+                />
+              ) : (
+                <div 
+                  style={{
+                    height: "200px",
+                    width: "100%",
+                    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "white",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    textAlign: "center",
+                    padding: "20px",
+                    boxSizing: "border-box"
+                  }}
+                >
+                  {project.title}
                 </div>
+              )}
+              <div style={{ padding: "15px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <span 
+                  className="project-date"
+                  style={{
+                    fontSize: "14px",
+                    backgroundColor: "#696969",
+                    color: "white",
+                    padding: "5px 12px",
+                    borderRadius: "15px",
+                    display: "inline-block",
+                    marginBottom: "10px",
+                    alignSelf: "center"
+                  }}
+                >
+                  {project.startDate}
+                </span>
+                <p 
+                  style={{
+                    margin: "10px 0",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    textTransform: "uppercase",
+                    letterSpacing: "2px",
+                    color: "black",
+                    textAlign: "center"
+                  }}
+                >
+                  {project.title}
+                </p>
               </div>
-              {project.url && (
-                <div className="text-center mt-2">
+            </div>
+            {project.url && (
+              <div style={{ padding: "0 15px 15px", textAlign: "center", display: "flex", gap: "10px", justifyContent: "center", flexWrap: "wrap" }}>
+                {project.url.includes("play.google.com") && (
+                  <>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "10px 20px",
+                        borderRadius: "25px",
+                        backgroundColor: "#01875f",
+                        color: "white",
+                        textDecoration: "none",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        transition: "all 0.3s ease"
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <i className="fab fa-google-play"></i>
+                      Play Store
+                    </a>
+                    <button
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        padding: "10px 20px",
+                        borderRadius: "25px",
+                        backgroundColor: "#000000",
+                        color: "white",
+                        border: "none",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease"
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <i className="fab fa-apple"></i>
+                      App Store
+                    </button>
+                  </>
+                )}
+                {project.url.includes("github.com") && (
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-link-btn"
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
                       gap: "8px",
-                      padding: "8px 16px",
-                      borderRadius: "20px",
-                      backgroundColor: "#6c5ce7",
+                      padding: "10px 20px",
+                      borderRadius: "25px",
+                      backgroundColor: "#24292e",
                       color: "white",
                       textDecoration: "none",
                       fontSize: "14px",
@@ -96,12 +179,12 @@ class Projects extends Component {
                     }}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <i className={linkInfo.icon}></i>
-                    {linkInfo.text}
+                    <i className="fab fa-github"></i>
+                    GitHub
                   </a>
-                </div>
-              )}
-            </span>
+                )}
+              </div>
+            )}
           </div>
         );
       });
@@ -114,7 +197,19 @@ class Projects extends Component {
             <span>{sectionName}</span>
           </h1>
           <div className="col-md-12 mx-auto">
-            <div className="row mx-auto">{projects}</div>
+            <div 
+              className="projects-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                padding: "0 20px",
+                maxWidth: "1200px",
+                margin: "0 auto"
+              }}
+            >
+              {projects}
+            </div>
           </div>
           <ProjectDetailsModal
             show={this.state.detailsModalShow}
