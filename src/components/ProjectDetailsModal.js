@@ -6,19 +6,8 @@ import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 
 class ProjectDetailsModal extends Component {
-  getLinkInfo(url) {
-    if (url && url.includes("play.google.com")) {
-      return { icon: "fab fa-google-play", text: "Play Store" };
-    } else if (url && url.includes("github.com")) {
-      return { icon: "fab fa-github", text: "GitHub" };
-    } else if (url && url.includes("apps.apple.com")) {
-      return { icon: "fab fa-apple", text: "App Store" };
-    }
-    return { icon: "fas fa-external-link-alt", text: "View Project" };
-  }
-
   render() {
-    let title, description, url, linkInfo, tech, img;
+    let title, description, url, tech, img;
 
     if (this.props.data) {
       const technologies = this.props.data.technologies;
@@ -26,7 +15,6 @@ class ProjectDetailsModal extends Component {
       title = this.props.data.title;
       description = this.props.data.description;
       url = this.props.data.url;
-      linkInfo = this.getLinkInfo(url);
 
       if (this.props.data.technologies) {
         tech = technologies.map((icons, i) => {

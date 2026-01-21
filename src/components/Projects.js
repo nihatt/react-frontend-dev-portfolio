@@ -10,17 +10,6 @@ class Projects extends Component {
     };
   }
 
-  getLinkIcon(url) {
-    if (url && url.includes("play.google.com")) {
-      return { icon: "fab fa-google-play", text: "Play Store" };
-    } else if (url && url.includes("github.com")) {
-      return { icon: "fab fa-github", text: "GitHub" };
-    } else if (url && url.includes("apps.apple.com")) {
-      return { icon: "fab fa-apple", text: "App Store" };
-    }
-    return { icon: "fas fa-external-link-alt", text: "View" };
-  }
-
   render() {
     let detailsModalShow = (data) => {
       this.setState({ detailsModalShow: true, deps: data });
@@ -30,7 +19,6 @@ class Projects extends Component {
     if (this.props.resumeProjects && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.projects;
       var projects = this.props.resumeProjects.map((project) => {
-        const linkInfo = this.getLinkIcon(project.url);
         return (
           <div
             className="project-card"
