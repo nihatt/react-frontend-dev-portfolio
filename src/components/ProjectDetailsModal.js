@@ -4,6 +4,7 @@ import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
+
 class ProjectDetailsModal extends Component {
   getLinkInfo(url) {
     if (url && url.includes("play.google.com")) {
@@ -17,15 +18,18 @@ class ProjectDetailsModal extends Component {
   }
 
   render() {
+    let title, description, url, linkInfo, tech, img;
+
     if (this.props.data) {
       const technologies = this.props.data.technologies;
       const images = this.props.data.images;
-      var title = this.props.data.title;
-      var description = this.props.data.description;
-      var url = this.props.data.url;
-      var linkInfo = this.getLinkInfo(url);
+      title = this.props.data.title;
+      description = this.props.data.description;
+      url = this.props.data.url;
+      linkInfo = this.getLinkInfo(url);
+
       if (this.props.data.technologies) {
-        var tech = technologies.map((icons, i) => {
+        tech = technologies.map((icons, i) => {
           return (
             <li className="list-inline-item mx-3" key={i}>
               <span>
@@ -40,16 +44,18 @@ class ProjectDetailsModal extends Component {
             </li>
           );
         });
-        if (this.props.data.images && this.props.data.images.length > 0) {
-          var img = images.map((elem, i) => {
-            return <div key={i} data-src={elem} />;
-          });
-        } else {
-          // No images - slider will be hidden
-          var img = null;
-        }
+      }
+
+      // Hatanın çözüldüğü kısım: 'img' değişkenini burada tek seferde kontrol ediyoruz
+      if (this.props.data.images && this.props.data.images.length > 0) {
+        img = images.map((elem, i) => {
+          return <div key={i} data-src={elem} />;
+        });
+      } else {
+        img = null;
       }
     }
+
     return (
       <Modal
         {...this.props}
