@@ -1,68 +1,83 @@
 {
-    "basic_info": {
-      "name": "Davina Griss",
-      "titles": [ "Front-end Developer", "Senior Data Engineer", "Dev Team lead", "Mobile App Developer" ],
-      "social": [
-        {
-          "name": "github",
-          "url": "https://github.com",
-          "class": "fab fa-github"
-        },
-        {
-          "name": "instagram",
-          "url": "https://www.instagram.com",
-          "class": "fab fa-instagram"
-        }
-      ],
-      "image": "myProfile.jpg"
-    },
-    "skills": {
-      "icons": [
-        {
-          "name": "HTML 5",
-          "class": "devicon-html5-plain",
-          "level": "95"
-        },
-        {
-          "name": "CSS 3",
-          "class": "devicon-css3-plain",
-          "level": "95"
-        },
-        {
-          "name": "Angular",
-          "class": "devicon-angularjs-plain",
-          "level": "80"
-        },
-        {
-          "name": "TypeScript",
-          "class": "devicon-typescript-plain",
-          "level": "90"
-        },
-        {
-          "name": "JavaScript",
-          "class": "devicon-javascript-plain",
-          "level": "70"
-        },
-        {
-          "name": "Sass",
-          "class": "devicon-sass-original",
-          "level": "75"
-        },
-        {
-          "name": "Bootstrap",
-          "class": "devicon-bootstrap-plain",
-          "level": "85"
-        },
-        {
-          "name": "C#",
-          "class": "devicon-csharp-plain",
-          "level": "65"
-        },
-        {
-          "name": "MySql",
-          "class": "devicon-mysql-plain",
-          "level": "60"
-        }
-      ]
-    }
+  "basic_info": {
+    "name": "Nihat Pamukçu",
+    "titles": ["React Native Developer", "Mobile App Developer", "Software Engineer", "Frontend Developer"],
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com/nihatt",
+        "class": "fab fa-github"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://linkedin.com/in/nihatpmkc",
+        "class": "fab fa-linkedin"
+      },
+      {
+        "name": "google-play",
+        "url": "https://play.google.com/store/apps/developer?id=dbR+Studios",
+        "class": "fab fa-google-play"
+      }
+    ],
+    "image": "myProfile.jpeg"
+  },
+  "skills": {
+    "icons": [
+      {
+        "name": "React Native",
+        "class": "devicon-react-original",
+        "level": "95"
+      },
+      {
+        "name": "React.js",
+        "class": "devicon-react-original",
+        "level": "90"
+      },
+      {
+        "name": "JavaScript",
+        "class": "devicon-javascript-plain",
+        "level": "90"
+      },
+      {
+        "name": "TypeScript",
+        "class": "devicon-typescript-plain",
+        "level": "85"
+      },
+      {
+        "name": "Java",
+        "class": "devicon-java-plain",
+        "level": "80"
+      },
+      {
+        "name": "Spring Boot",
+        "class": "devicon-spring-plain",
+        "level": "75"
+      },
+      {
+        "name": "PostgreSQL",
+        "class": "devicon-postgresql-plain",
+        "level": "75"
+      },
+      {
+        "name": "Docker",
+        "class": "devicon-docker-plain",
+        "level": "70"
+      },
+      {
+        "name": "Git",
+        "class": "devicon-git-plain",
+        "level": "90"
+      },
+      {
+        "name": "Firebase",
+        "class": "devicon-firebase-plain",
+        "level": "85"
+      },
+      {
+        "name": "Redux",
+        "class": "devicon-redux-original",
+        "level": "85"
+      }
+    ]
   }
+}

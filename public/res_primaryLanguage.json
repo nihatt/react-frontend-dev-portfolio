@@ -1,118 +1,214 @@
 {
-    "basic_info": {
-      "description_header": "Hi",
-      "description": "👋 I'm Davina Griss. Fictional person for preview purposes :) I'm working with newest front-end frameworks like Angular, React and Vue. What you are seeing now is portfolio template from Dorota1997. If you like this portfolio template, make sure to ⭐ the repository to make it more recognizable for other users. Thank you 💜",
-      "section_name": {
-        "about": "About me",
-        "projects": "Projects",
-        "skills": "Skills",
-        "experience": "Experience"
-      }
+  "basic_info": {
+    "description_header": "Hi",
+    "description": "👋 I'm Nihat Pamukçu. A passionate React Native & Mobile App Developer based in Istanbul, Turkey. I specialize in building high-quality mobile applications and have experience working with various technologies including React Native, React.js, Java, and Spring Boot. I love creating user-friendly applications that solve real-world problems.",
+    "section_name": {
+      "about": "About me",
+      "projects": "Projects",
+      "skills": "Skills",
+      "experience": "Experience"
+    }
+  },
+  "projects": [
+    {
+      "title": "Clean Gallery",
+      "startDate": "2025",
+      "description": "A smart gallery cleaning app with swipe-based interface. Swipe right to keep, swipe left to delete photos. Features light & dark mode support, intuitive UI, and secure photo management without cloud storage.",
+      "images": [],
+      "url": "https://play.google.com/store/apps/details?id=com.cleangallery",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-typescript-plain",
+          "name": "TypeScript"
+        },
+        {
+          "class": "devicon-android-plain",
+          "name": "Android"
+        }
+      ]
     },
-    "projects": [
-      {
-        "title": "Animal Shelter",
-        "startDate": "2020",
-        "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
-        "images": [
-          "images/portfolio/animal-shelter/p1.jpg",
-          "images/portfolio/animal-shelter/p2.jpg"
-        ],
-        "url": "",
-        "technologies": [
-          {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
-          }
-        ]
-      },
-      {
-        "title": "Photography",
-        "startDate": "2018",
-        "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
-        "images": [
-          "images/portfolio/photography/p1.jpg",
-          "images/portfolio/photography/p2.jpg"
-        ],
-        "url": "https://github.com",
-        "technologies": [
-          {
-            "class": "devicon-react-original",
-            "name": "React"
-          },
-          {
-            "class": "devicon-javascript-plain",
-            "name": "JavaScript"
-          }
-        ]
-      },
-      {
-        "title": "3D Object Viewer",
-        "startDate": "2015",
-        "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
-        "images": [
-          "images/portfolio/adventure/p1.jpg",
-          "images/portfolio/adventure/p2.jpg"
-        ],
-        "url": "https://github.com",
-        "technologies": [
-          {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
-          }
-        ]
-      }
-    ],
-    "experience": [
-      {
-        "company": "DefOpenSource",
-        "title": "Front-End Developer",
-        "years": "10.2019 - present",
-        "mainTech": [
-          "Angular 8/9/10"
-        ],
-        "technologies": [
-          "REST API",
-          "RxJS",
-          "JavaScript",
-          "Bootstrap",
-          "MDBootstrap",
-          "EF Core",
-          ".NET Core",
-          "SignalR",
-          "Angular Material"
-        ]
-      },
-      {
-        "company": "Serros Solutions",
-        "title": "Intern",
-        "years": "01.2018 - 09.2019",
-        "mainTech": [
-          "Angular 7/8"
-        ],
-        "technologies": [
-          "RxJS",
-          "Django",
-          "PHP",
-          "JavaScript",
-          "DHTMLX Gantt"
-        ]
-      }
-    ]
-  }
+    {
+      "title": "Wordle Türkçe",
+      "startDate": "2024",
+      "description": "Turkish version of the popular Wordle game. Find the hidden 5-letter Turkish word in 6 tries with colorful hints. Features over 5000 Turkish words, progressive difficulty levels, and user-friendly interface.",
+      "images": [],
+      "url": "https://play.google.com/store/apps/details?id=com.wordledbr",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "FitTrack",
+      "startDate": "2023",
+      "description": "A comprehensive fitness tracking mobile application built with React Native and Firebase. Helps users track their workouts, monitor progress, and achieve their fitness goals with an intuitive interface.",
+      "images": [],
+      "url": "https://github.com/nihatt/FitTrack",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-firebase-plain",
+          "name": "Firebase"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "Param Mobil",
+      "startDate": "2022",
+      "description": "A mobile banking and finance application developed with Flutter and Dart. Features secure transactions, account management, and modern financial services integration.",
+      "images": [],
+      "url": "https://github.com/nihatt/parammobil",
+      "technologies": [
+        {
+          "class": "devicon-flutter-plain",
+          "name": "Flutter"
+        },
+        {
+          "class": "devicon-dart-plain",
+          "name": "Dart"
+        },
+        {
+          "class": "devicon-firebase-plain",
+          "name": "Firebase"
+        }
+      ]
+    },
+    {
+      "title": "AI MusicStudio",
+      "startDate": "2024",
+      "description": "An innovative AI-powered music creation application. Leverages artificial intelligence to help users create, edit, and produce music with cutting-edge technology.",
+      "images": [],
+      "url": "https://github.com/nihatt/aimusicstudio",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-tensorflow-original",
+          "name": "AI/ML"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Merkezi Kayıt Kuruluşu A.Ş. (MKK)",
+      "title": "Software Engineer",
+      "years": "02.2025 - Present",
+      "mainTech": [
+        "Java / Spring Boot"
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Hibernate",
+        "JPA",
+        "GWT",
+        "React.js",
+        "Next.js",
+        "PostgreSQL",
+        "Oracle",
+        "Kafka",
+        "Elasticsearch",
+        "Kubernetes",
+        "Docker",
+        "OpenShift"
+      ]
+    },
+    {
+      "company": "American Hospital",
+      "title": "Frontend Developer",
+      "years": "07.2023 - 02.2025",
+      "mainTech": [
+        "React Native"
+      ],
+      "technologies": [
+        "React Native",
+        "JavaScript",
+        "TypeScript",
+        "Mobile Development",
+        "Testing",
+        "Debugging"
+      ]
+    },
+    {
+      "company": "Saha Bilişim Teknolojileri (Okulyo)",
+      "title": "Frontend Developer",
+      "years": "01.2023 - 05.2023",
+      "mainTech": [
+        "React.js"
+      ],
+      "technologies": [
+        "React.js",
+        "JavaScript",
+        "Automation",
+        "School Management Systems"
+      ]
+    },
+    {
+      "company": "Karaca A.Ş.",
+      "title": "Full Stack Mobile Developer",
+      "years": "04.2022 - 01.2023",
+      "mainTech": [
+        "React Native"
+      ],
+      "technologies": [
+        "React Native",
+        "React.js",
+        "JavaScript",
+        "Mobile Development",
+        "Testing"
+      ]
+    },
+    {
+      "company": "Karaca A.Ş.",
+      "title": "Full-stack Developer Intern",
+      "years": "10.2021 - 04.2022",
+      "mainTech": [
+        "React Native"
+      ],
+      "technologies": [
+        "React Native",
+        "Mobile Development",
+        "JavaScript"
+      ]
+    },
+    {
+      "company": "IEEE Istanbul University-Cerrahpaşa",
+      "title": "Frontend Developer",
+      "years": "11.2020 - 10.2021",
+      "mainTech": [
+        "React.js"
+      ],
+      "technologies": [
+        "React.js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Web Development"
+      ]
+    }
+  ]
+}

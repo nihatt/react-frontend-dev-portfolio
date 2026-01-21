@@ -5,6 +5,17 @@ import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 class ProjectDetailsModal extends Component {
+  getLinkInfo(url) {
+    if (url && url.includes("play.google.com")) {
+      return { icon: "fab fa-google-play", text: "Play Store" };
+    } else if (url && url.includes("github.com")) {
+      return { icon: "fab fa-github", text: "GitHub" };
+    } else if (url && url.includes("apps.apple.com")) {
+      return { icon: "fab fa-apple", text: "App Store" };
+    }
+    return { icon: "fas fa-external-link-alt", text: "View Project" };
+  }
+
   render() {
     if (this.props.data) {
       const technologies = this.props.data.technologies;
@@ -12,6 +23,7 @@ class ProjectDetailsModal extends Component {
       var title = this.props.data.title;
       var description = this.props.data.description;
       var url = this.props.data.url;
+      var linkInfo = this.getLinkInfo(url);
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
           return (
@@ -28,10 +40,13 @@ class ProjectDetailsModal extends Component {
             </li>
           );
         });
-        if (this.props.data.images) {
+        if (this.props.data.images && this.props.data.images.length > 0) {
           var img = images.map((elem, i) => {
             return <div key={i} data-src={elem} />;
           });
+        } else {
+          // No images - slider will be hidden
+          var img = null;
         }
       }
     }
@@ -47,52 +62,81 @@ class ProjectDetailsModal extends Component {
           <i className="fas fa-times fa-3x close-icon"></i>
         </span>
         <div className="col-md-12">
-          <div className="col-md-10 mx-auto" style={{ paddingBottom: "50px" }}>
-            <div className="slider-tab">
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="emojione:red-circle"
-                data-inline="false"
-                style={{ marginLeft: "5px" }}
-              ></span>{" "}
-              &nbsp;{" "}
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="twemoji:yellow-circle"
-                data-inline="false"
-              ></span>{" "}
-              &nbsp;{" "}
-              <span
-                className="iconify slider-iconfiy"
-                data-icon="twemoji:green-circle"
-                data-inline="false"
-              ></span>
+          {img ? (
+            <div className="col-md-10 mx-auto" style={{ paddingBottom: "50px" }}>
+              <div className="slider-tab">
+                <span
+                  className="iconify slider-iconfiy"
+                  data-icon="emojione:red-circle"
+                  data-inline="false"
+                  style={{ marginLeft: "5px" }}
+                ></span>{" "}
+                &nbsp;{" "}
+                <span
+                  className="iconify slider-iconfiy"
+                  data-icon="twemoji:yellow-circle"
+                  data-inline="false"
+                ></span>{" "}
+                &nbsp;{" "}
+                <span
+                  className="iconify slider-iconfiy"
+                  data-icon="twemoji:green-circle"
+                  data-inline="false"
+                ></span>
+              </div>
+              <AwesomeSlider
+                cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
+                animation="scaleOutAnimation"
+                className="slider-image"
+              >
+                {img}
+              </AwesomeSlider>
             </div>
-            <AwesomeSlider
-              cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
-              animation="scaleOutAnimation"
-              className="slider-image"
+          ) : (
+            <div 
+              className="col-md-10 mx-auto" 
+              style={{ 
+                paddingBottom: "30px",
+                background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                borderRadius: "10px",
+                height: "200px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "20px"
+              }}
             >
-              {img}
-            </AwesomeSlider>
-          </div>
+              <h2 style={{ color: "white", margin: 0 }}>{title}</h2>
+            </div>
+          )}
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
               {title}
-              {url ? (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-href"
-                >
-                  <i
-                    className="fas fa-external-link-alt"
-                    style={{ marginLeft: "10px" }}
-                  ></i>
-                </a>
-              ) : null}
             </h3>
+            {url ? (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "10px 20px",
+                  borderRadius: "25px",
+                  backgroundColor: url.includes("play.google.com") ? "#01875f" : "#24292e",
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  marginBottom: "15px",
+                  transition: "all 0.3s ease"
+                }}
+              >
+                <i className={linkInfo.icon} style={{ fontSize: "18px" }}></i>
+                {linkInfo.text}
+              </a>
+            ) : null}
             <p className="modal-description">{description}</p>
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>

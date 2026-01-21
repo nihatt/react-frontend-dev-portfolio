@@ -1,116 +1,214 @@
 {
-    "basic_info": {
-      "description_header": "Cześć",
-      "description": "👋 Jestem Davina Griss. Fikcyjna osoba na potrzeby demonstracji. Pracuję z najnowszymi frameworkami front-end takimi jak Angular, React i Vue. To co teraz widzisz to szablon portfolio od Dorota1997. Jeżeli podoba Ci się ten szablon portfolio nie zapomnij o ⭐, żeby było bardziej rozpoznawalne dla innych użytkowników. Dzięki 💜",
-      "section_name": {
-        "about": "O mnie",
-        "projects": "Projekty",
-        "skills": "Umiejętności",
-        "experience": "Doświadczenie"
-      }
+  "basic_info": {
+    "description_header": "Merhaba",
+    "description": "👋 Ben Nihat Pamukçu. İstanbul'da yaşayan tutkulu bir React Native & Mobil Uygulama Geliştiricisiyim. React Native, React.js, Java ve Spring Boot dahil çeşitli teknolojilerle yüksek kaliteli mobil uygulamalar geliştirme konusunda deneyimliyim. Gerçek dünya problemlerini çözen, kullanıcı dostu uygulamalar oluşturmayı seviyorum.",
+    "section_name": {
+      "about": "Hakkımda",
+      "projects": "Projeler",
+      "skills": "Yetenekler",
+      "experience": "Deneyim"
+    }
+  },
+  "projects": [
+    {
+      "title": "Clean Gallery",
+      "startDate": "2025",
+      "description": "Kaydırma tabanlı arayüze sahip akıllı galeri temizleme uygulaması. Saklamak için sağa, silmek için sola kaydırın. Açık ve koyu tema desteği, sezgisel kullanıcı arayüzü ve bulut depolama olmadan güvenli fotoğraf yönetimi sunar.",
+      "images": [],
+      "url": "https://play.google.com/store/apps/details?id=com.cleangallery",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-typescript-plain",
+          "name": "TypeScript"
+        },
+        {
+          "class": "devicon-android-plain",
+          "name": "Android"
+        }
+      ]
     },
-    "projects": [
-      {
-        "title": "Animal Shelter",
-        "startDate": "2020",
-        "description": "Najbardziej rozbudowana aplikacja nad którą miałam okazję pracować. Poznałam dużo technologii a mój kod by sprawdzany przez super opiekuna. Aplikacja obsługuje wszystkie procesy adopcji i pozwala na przechowywanie wszelkiej dokumentacji związanej z adopcją zwierząt ze schroniska.",
-        "images": [
-          "images/portfolio/animal-shelter/p1.jpg",
-          "images/portfolio/animal-shelter/p2.jpg"
-        ],
-        "url": "",
-        "technologies": [
-          {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
-          }
-        ]
-      },
-      {
-        "title": "Photography",
-        "startDate": "2018",
-        "description": "Osobisty projekt na przedmiot ze studiów. Byłam odpowiedzilna za testowanie aplikacji, która optymalizuje zdjęcia z pomocą popularnych algorytmów używanych przed edytory grafiki takie jak Pixlr czy Adobe Photoshop. Otrzymałam 5-tkę za projekt :)",
-        "images": [
-          "images/portfolio/photography/p1.jpg",
-          "images/portfolio/photography/p2.jpg"
-        ],
-        "url": "https://github.com",
-        "technologies": [
-          {
-            "class": "devicon-react-original",
-            "name": "React"
-          },
-          {
-            "class": "devicon-javascript-plain",
-            "name": "JavaScript"
-          }
-        ]
-      },
-      {
-        "title": "3D Object Viewer",
-        "startDate": "2015",
-        "description": "Jedna z pierwszych aplikacji nad którymi pracowałam na stażu. Musiałam przygotować front-end dla aplikacji, która pokazuje modele 3D znanych budynków. To był także mój pierwszy projekt w frameworku Angular. Dużo się nauczyłam!",
-        "images": [
-          "images/portfolio/adventure/p1.jpg",
-          "images/portfolio/adventure/p2.jpg"
-        ],
-        "url": "https://github.com",
-        "technologies": [
-          {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
-          }
-        ]
-      }
-    ],
-    "experience": [
-      {
-        "company": "DefOpenSource",
-        "title": "Front-End Developer",
-        "years": "10.2019 - obecnie",
-        "mainTech": [
-          "Angular 8/9/10"
-        ],
-        "technologies": [
-          "REST API",
-          "RxJS",
-          "JavaScript",
-          "Bootstrap",
-          "MDBootstrap",
-          "EF Core",
-          "Angular Material"
-        ]
-      },
-      {
-        "company": "Serros Solutions",
-        "title": "Stażystka",
-        "years": "01.2018 - 09.2019",
-        "mainTech": [
-          "Angular 7/8"
-        ],
-        "technologies": [
-          "REST API",
-          "RxJS",
-          "Swagger",
-          "JavaScript",
-          "DHTMLX Gantt"
-        ]
-      }
-    ]
-  }
+    {
+      "title": "Wordle Türkçe",
+      "startDate": "2024",
+      "description": "Popüler Wordle oyununun Türkçe versiyonu. 6 denemede gizli 5 harfli Türkçe kelimeyi renkli ipuçlarıyla bulun. 5000'den fazla Türkçe kelime, kademeli zorluk seviyeleri ve kullanıcı dostu arayüz içerir.",
+      "images": [],
+      "url": "https://play.google.com/store/apps/details?id=com.wordledbr",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "FitTrack",
+      "startDate": "2023",
+      "description": "React Native ve Firebase ile geliştirilmiş kapsamlı bir fitness takip uygulaması. Kullanıcıların antrenmanlarını takip etmelerine, ilerlemelerini izlemelerine ve sezgisel bir arayüzle fitness hedeflerine ulaşmalarına yardımcı olur.",
+      "images": [],
+      "url": "https://github.com/nihatt/FitTrack",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-firebase-plain",
+          "name": "Firebase"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "Param Mobil",
+      "startDate": "2022",
+      "description": "Flutter ve Dart ile geliştirilen mobil bankacılık ve finans uygulaması. Güvenli işlemler, hesap yönetimi ve modern finansal hizmet entegrasyonu özellikleri sunar.",
+      "images": [],
+      "url": "https://github.com/nihatt/parammobil",
+      "technologies": [
+        {
+          "class": "devicon-flutter-plain",
+          "name": "Flutter"
+        },
+        {
+          "class": "devicon-dart-plain",
+          "name": "Dart"
+        },
+        {
+          "class": "devicon-firebase-plain",
+          "name": "Firebase"
+        }
+      ]
+    },
+    {
+      "title": "AI MusicStudio",
+      "startDate": "2024",
+      "description": "Yapay zeka destekli yenilikçi bir müzik oluşturma uygulaması. Kullanıcıların en son teknolojiyle müzik oluşturmasına, düzenlemesine ve üretmesine yardımcı olmak için yapay zekadan yararlanır.",
+      "images": [],
+      "url": "https://github.com/nihatt/aimusicstudio",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React Native"
+        },
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-tensorflow-original",
+          "name": "AI/ML"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Merkezi Kayıt Kuruluşu A.Ş. (MKK)",
+      "title": "Yazılım Mühendisi",
+      "years": "02.2025 - Halen",
+      "mainTech": [
+        "Java / Spring Boot"
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Hibernate",
+        "JPA",
+        "GWT",
+        "React.js",
+        "Next.js",
+        "PostgreSQL",
+        "Oracle",
+        "Kafka",
+        "Elasticsearch",
+        "Kubernetes",
+        "Docker",
+        "OpenShift"
+      ]
+    },
+    {
+      "company": "Amerikan Hastanesi",
+      "title": "Frontend Geliştirici",
+      "years": "07.2023 - 02.2025",
+      "mainTech": [
+        "React Native"
+      ],
+      "technologies": [
+        "React Native",
+        "JavaScript",
+        "TypeScript",
+        "Mobil Geliştirme",
+        "Test",
+        "Hata Ayıklama"
+      ]
+    },
+    {
+      "company": "Saha Bilişim Teknolojileri (Okulyo)",
+      "title": "Frontend Geliştirici",
+      "years": "01.2023 - 05.2023",
+      "mainTech": [
+        "React.js"
+      ],
+      "technologies": [
+        "React.js",
+        "JavaScript",
+        "Otomasyon",
+        "Okul Yönetim Sistemleri"
+      ]
+    },
+    {
+      "company": "Karaca A.Ş.",
+      "title": "Full Stack Mobil Geliştirici",
+      "years": "04.2022 - 01.2023",
+      "mainTech": [
+        "React Native"
+      ],
+      "technologies": [
+        "React Native",
+        "React.js",
+        "JavaScript",
+        "Mobil Geliştirme",
+        "Test"
+      ]
+    },
+    {
+      "company": "Karaca A.Ş.",
+      "title": "Full-stack Geliştirici Stajyeri",
+      "years": "10.2021 - 04.2022",
+      "mainTech": [
+        "React Native"
+      ],
+      "technologies": [
+        "React Native",
+        "Mobil Geliştirme",
+        "JavaScript"
+      ]
+    },
+    {
+      "company": "IEEE İstanbul Üniversitesi-Cerrahpaşa",
+      "title": "Frontend Geliştirici",
+      "years": "11.2020 - 10.2021",
+      "mainTech": [
+        "React.js"
+      ],
+      "technologies": [
+        "React.js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Web Geliştirme"
+      ]
+    }
+  ]
+}
